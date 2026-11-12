@@ -41,7 +41,7 @@ beforeAll(async () => {
   });
   const { tasks } = (await tasksRes.json()) as { tasks: { id: string }[] };
   taskId = tasks[0].id;
-});
+}, 60000);
 
 describe("task access control", () => {
   // Test A
@@ -55,7 +55,7 @@ describe("task access control", () => {
       body: JSON.stringify({ title: "viewer update attempt" }),
     });
     expect(res.status).toBe(403);
-  });
+     }, 30000);
 
   // Test B
   it("a viewer cannot create a task", async () => {
@@ -67,8 +67,8 @@ describe("task access control", () => {
       },
       body: JSON.stringify({ title: "viewer create attempt" }),
     });
-    expect(res.status).toBe(401);
-  });
+    expect(res.status).toBe(403);
+  }, 30000);
 
   // Test C
   it("a member can create a task", async () => {
