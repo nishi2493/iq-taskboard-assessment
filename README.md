@@ -1,3 +1,6 @@
+Screen recording: https://drive.google.com/drive/folders/10UboMyU11SbcM810uBgdtV4KLqHc0w7O?usp=drive_link
+
+
 # TaskBoard — Project Management App
 
 A Next.js 15 fullstack application for managing projects, tasks, and team members. TypeScript + Prisma + PostgreSQL on the server, React 19 + TanStack Query on the client.
@@ -118,3 +121,5 @@ curl -H "Authorization: Bearer <token>" http://localhost:3000/api/projects
 - Tailwind CSS 3
 - bcryptjs + jsonwebtoken
 - Vitest 2 (testing)
+
+
